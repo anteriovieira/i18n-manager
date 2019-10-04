@@ -2,6 +2,7 @@ import { Card, Col, Layout, List, Row, Tooltip } from 'antd';
 import React, { useCallback } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router';
 
+import Logo from '@src/assets/retina-logo-02.png'
 import RemoteLink from '@src/components/RemoteLink';
 import { actions as folderActions } from '@src/folder/store';
 import { useAction, useStoreState } from '@src/store';
@@ -53,17 +54,8 @@ const Home: React.FC<RouteComponentProps<any>> = ({ history }) => {
           </Col>
 
           <Col span={10}>
-            <Card title="Version">
-              <Row>Current version: {currentVersion}</Row>
-              {latestVersion.length > 0 && currentVersion !== latestVersion && (
-                <Row>
-                  <strong>New version available ({latestVersion})!</strong>
-                  {' '}
-                  <RemoteLink href={`${RELEASES_TAG_URL}/${latestVersion}`}>
-                    Download
-                  </RemoteLink>
-                </Row>
-              )}
+            <Card title="Aegon i18n">
+              <img src={Logo} className={styles.Logo} />
             </Card>
           </Col>
         </Row>
