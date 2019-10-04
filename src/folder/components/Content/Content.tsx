@@ -185,7 +185,7 @@ const LanguageMenu = React.memo<ILanguageMenuProps>(
       ));
 
     return (
-      <Card title="Translate this field from">
+      <Card title="Translate this field from now">
         <Row>
           <Select
             placeholder="Select a language"

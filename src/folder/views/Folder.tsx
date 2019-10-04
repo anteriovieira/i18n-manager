@@ -117,7 +117,7 @@ const Folder: React.FC = () => {
         cancelTranslate={cancelTranslate}
       />
 
-      <Layout>
+      <Layout >
         <Layout.Sider
           theme="light"
           width={300}
@@ -164,6 +164,11 @@ const Folder: React.FC = () => {
 
           {selectedItem && folder.length > 0 && originalFolder.length > 0 && (
             <div className={commonStyles.Scroll}>
+              <Card className={styles.Path}>
+                <Icon type="branches"/> &nbsp;
+
+                {selectedItem.path.slice(4).join('.')}
+              </Card>
               <Content
                 folder={folder}
                 originalFolder={originalFolder}

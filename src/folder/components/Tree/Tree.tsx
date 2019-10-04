@@ -285,9 +285,9 @@ const getLabelIcon = _.memoize((itemType: TreeItemType) => {
     case 'file':
       return 'file-text';
     case 'node':
-      return 'bars';
+      return 'appstore';
     case 'item':
-      return 'line';
+      return 'align-left';
   }
 });
 
